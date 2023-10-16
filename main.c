@@ -3,16 +3,17 @@
 
 int main(void)
 {
+    printf("Conversion Table \n");
+    printf("Pounds / Kilograms / Miles / Kilometers\n");
+    printf("---------------------------\n");
 
-    int a,b,c ,d ;
-    printf("Enter the first value :");
-    scanf("%e" ,&a);
-    printf("Enter the second value:");
-    scanf("%e" ,&b);
-    printf("Enter the third value:");
-    scanf("%e",&c);
-    d = a + b + c;
-    printf("%d + %d +%d = %d\n" , a , b ,c , d);
+    float pounds , kilograms , miles , kilometers;
 
-    return 0 ;
+    for (pounds = 10; pounds <= 100; pounds += 10){
+        kilograms = pounds * 0.453592; // Conversion factor for pounds to kilograms
+        miles = pounds * 0.621371; // Conversion factor for miles to kilometers
+        kilometers = miles * 1.60934;
+        printf("%. 2f 1bs / %.2f kg / %.2f mi / %.2f km \n ", pounds , kilograms , miles, kilometers);
+    }
+    return 0;
 }
